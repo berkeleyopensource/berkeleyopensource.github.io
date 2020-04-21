@@ -1,5 +1,6 @@
-<script>
-</script>
+<svelte:head>
+	<title>Open Source</title>
+</svelte:head>
 
 <main>
 	<div class="heading">
@@ -9,14 +10,29 @@
 			<div class="navbar-link"><a href="https://github.com/berkeleyopensource">Github</a></div>
 		</div>
 	</div>
-	<div class="content"></div>
+	<div class="content">
+		<section>
+			<h2>Lorem ipsum dolor sit amet.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis tortor eu nibh vestibulum congue.</p>
+		</section>
+		<section>
+			<h2>About Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis tortor eu nibh vestibulum congue. Proin facilisis eleifend rutrum. Aenean accumsan nibh leo, laoreet auctor tellus luctus at. </p>
+			<a href="/">Read More →</a>
+		</section>
+		<section>
+			<h2>Projects</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis tortor eu nibh vestibulum congue. Proin facilisis eleifend rutrum. Aenean accumsan nibh leo, laoreet auctor tellus luctus at. </p>
+			<a href="/">View More →</a>
+		</section>		
+	</div>
+	<div class="footing">
+	</div>
 </main>
 
 <style>
 	@import url('https://rsms.me/inter/inter.css');
 	main {
-		text-align: center;
-		max-width: 240px;
 		min-height: 100vh;
 		margin: 0 auto;
 		font-family: 'Inter', sans-serif;
@@ -75,9 +91,27 @@
 		transition: text-decoration .2s ease-in-out;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.content {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	.content section {
+		max-width:  800px;
+		margin: auto;
+		font-size: 1.2em;
+		min-height: 30vh;
+	}
+
+	.content section:first-of-type {
+		height: 50vh;
+		margin: auto;
+		font-size: 1.5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;    
+	}
+
+	.footing {
 	}
 </style>
