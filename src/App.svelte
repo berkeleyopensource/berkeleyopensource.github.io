@@ -1,10 +1,14 @@
 <svelte:head>
-	<title>Open Source</title>
+	<title>Berkeley Open Source</title>
 </svelte:head>
+
+<script>
+	import Projects from './Projects.svelte';
+</script>
 
 <main>
 	<div class="heading">
-		<div class="header"><h1>Open Source</h1><h2>at Berkeley</h2></div>
+		<div class="header"><a href="/"><h1>Open Source</h1><h2>at Berkeley</h2></a></div>
 		<div class="navbar">
 			<div class="navbar-link"><a href="/about">About</a></div>
 			<div class="navbar-link"><a href="https://github.com/berkeleyopensource">Github</a></div>
@@ -23,6 +27,7 @@
 		<section>
 			<h2>Projects</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis tortor eu nibh vestibulum congue. Proin facilisis eleifend rutrum. Aenean accumsan nibh leo, laoreet auctor tellus luctus at. </p>
+			<Projects/>
 			<a href="/">View More →</a>
 		</section>		
 	</div>
@@ -31,15 +36,27 @@
 </main>
 
 <style>
+
 	@import url('https://rsms.me/inter/inter.css');
+
+	@keyframes fadeIn { 
+		from { opacity: 0; } 
+		to { opacity: 1; }
+	}
+
+	:global(body) {
+		position: relative;
+		height: auto;
+		min-height: 100% !important;		
+		margin:  0em;
+		padding: 0em;
+	}
+
 	main {
 		min-height: 100vh;
 		margin: 0 auto;
 		font-family: 'Inter', sans-serif;
-	}
-	
-	body {
-		padding: 0em;
+		animation: fadeIn .2s ease-in-out;
 	}
 
 	h1 {
@@ -59,6 +76,13 @@
 	.header {
 		width: fit-content;
 		letter-spacing: -0.05em;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	.header a {
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.header h1 {
@@ -100,7 +124,8 @@
 		max-width:  800px;
 		margin: auto;
 		font-size: 1.2em;
-		min-height: 30vh;
+		min-height: 20vh;
+		margin: 10vh auto;
 	}
 
 	.content section:first-of-type {
@@ -113,5 +138,7 @@
 	}
 
 	.footing {
+		height: 5em;
+		max-width: 1200px;
 	}
 </style>
